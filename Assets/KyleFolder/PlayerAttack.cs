@@ -8,7 +8,8 @@ public class PlayerAttack : MonoBehaviour
     public float timeSinceAttack;
     public Transform attackTransform;
     public Vector2 attackArea;
-    public LayerMask EnemyMask;
+    public LayerMask AttackableLayer;
+    public float _damage;
 
     void Start()
     {
@@ -31,10 +32,15 @@ public class PlayerAttack : MonoBehaviour
 
     private void Hit()
     {
-        Collider2D[] enemyHit = Physics2D.OverlapBoxAll(attackTransform.position, attackArea, 0, EnemyMask);
-        if (enemyHit.Length > 0)
+        Collider2D[] objectsHit = Physics2D.OverlapBoxAll(attackTransform.position, attackArea, 0, AttackableLayer);
+        
+        for (int i = 0; i < objectsHit.Length; i++)
         {
-            Debug.Log("Hit");
+            if (objectsHit[i].GetComponent<Enemy>() != null)
+            {
+                objectsHit[i].GetComponent<Enemy>().EnemyHit(_damage);
+                Debug.Log("Ouch");
+            }
         }
     }
 
