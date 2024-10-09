@@ -32,19 +32,13 @@ public class Wanderer : Enemy
         }
         if (Vector2.Distance(transform.position, _currentPoint.position) < 0.5f && _currentPoint == _PointB.transform)
         {
-            flip();
+            this.GetComponent<SpriteRenderer>().flipX = true;
             _currentPoint = _PointA.transform;
         }
         if (Vector2.Distance(transform.position, _currentPoint.position) < 0.5f && _currentPoint == _PointA.transform)
         {
-            flip();
+            this.GetComponent<SpriteRenderer>().flipX = false;
             _currentPoint = _PointB.transform;
         }
-    }
-    private void flip()
-    {
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
     }
 }
