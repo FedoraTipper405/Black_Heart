@@ -35,4 +35,11 @@ public class Flyer : Enemy
         localScale.x *= -1;
         transform.localScale = localScale;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<IHealth>() != null)
+        {
+            collision.gameObject.GetComponent<IHealth>().TakeDamage();
+        }
+    }
 }

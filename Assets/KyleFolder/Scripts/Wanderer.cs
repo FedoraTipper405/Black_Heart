@@ -41,4 +41,11 @@ public class Wanderer : Enemy
             _currentPoint = _PointB.transform;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<IHealth>() != null)
+        {
+            collision.gameObject.GetComponent<IHealth>().TakeDamage();
+        }
+    }
 }

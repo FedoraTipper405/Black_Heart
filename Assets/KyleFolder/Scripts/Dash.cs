@@ -1,3 +1,4 @@
+using Code.Scripts.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,11 @@ public class Dash : MonoBehaviour
     [SerializeField]
     Rigidbody2D rb;
 
+    private Animator _animator;
+    void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
     void Start()
     {
 
@@ -30,6 +36,7 @@ public class Dash : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
+            _animator.Play(PlayerAnimationConstants.DASH);
             StartCoroutine(Dashing());
         }
     }

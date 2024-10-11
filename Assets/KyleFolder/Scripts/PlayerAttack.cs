@@ -1,3 +1,4 @@
+using Code.Scripts.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,13 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask AttackableLayer;
     public float _damage;
 
+    private Animator _animator;
+
+    void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     void Start()
     {
 
@@ -22,6 +30,7 @@ public class PlayerAttack : MonoBehaviour
         timeSinceAttack += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.R))
         {
+            _animator.Play(PlayerAnimationConstants.ATTACK);
             if (timeSinceAttack >= timeBetweenAttack)
             {
                 timeSinceAttack = 0;

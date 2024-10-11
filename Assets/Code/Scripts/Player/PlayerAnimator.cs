@@ -25,5 +25,7 @@ namespace Code.Scripts.Player
         public const string RUN = "Run";
         public const string AIR = "JumpMid";
         public const string JUMP = "Jump";
+        public const string ATTACK = "ComboAttack01";
+        public const string DASH = "Dash";
     }
 }
