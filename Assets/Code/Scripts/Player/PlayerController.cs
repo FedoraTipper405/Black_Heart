@@ -98,7 +98,15 @@ namespace Code.Scripts.Player
 
         public void HandleMovement(Vector2 movement)
         {
-            
+
+            if (movement.x < 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (movement.x > 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
             Data.MovementDirection = movement.x;
         }
 
@@ -125,7 +133,6 @@ namespace Code.Scripts.Player
         protected override void FixedUpdate()
         {
             base.FixedUpdate();
-            this.GetComponent<SpriteRenderer>().flipX = RB.velocity.x < -0.02f;
 
         }
 
