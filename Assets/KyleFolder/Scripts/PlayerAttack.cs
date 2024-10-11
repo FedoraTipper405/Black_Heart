@@ -5,13 +5,18 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float timeBetweenAttack;
-    public float timeSinceAttack;
-    public Transform attackTransform;
-    public Vector2 attackArea;
-    public LayerMask AttackableLayer;
+    [SerializeField]
+    private float _timeBetweenAttack;
+    [SerializeField]
+    private float _timeSinceAttack;
+    [SerializeField]
+    private Transform _attackTransform;
+    [SerializeField]
+    private Vector2 _attackArea;
+    [SerializeField]
+    private LayerMask _attackableLayer;
+    [SerializeField]
     public float _damage;
-
     private Animator _animator;
 
     void Awake()
@@ -27,13 +32,13 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        timeSinceAttack += Time.deltaTime;
+        _timeSinceAttack += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.R))
         {
             _animator.Play(PlayerAnimationConstants.ATTACK);
-            if (timeSinceAttack >= timeBetweenAttack)
+            if (_timeSinceAttack >= _timeBetweenAttack)
             {
-                timeSinceAttack = 0;
+                _timeSinceAttack = 0;
                 Hit();
             }
         }
@@ -41,7 +46,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Hit()
     {
-        Collider2D[] objectsHit = Physics2D.OverlapBoxAll(attackTransform.position, attackArea, 0, AttackableLayer);
+        Collider2D[] objectsHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, _attackableLayer);
         
         for (int i = 0; i < objectsHit.Length; i++)
         {
@@ -56,6 +61,6 @@ public class PlayerAttack : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(attackTransform.position, attackArea);
+        Gizmos.DrawWireCube(_attackTransform.position, _attackArea);
     }
 }

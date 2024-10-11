@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-    public bool canDash = true;
-    public bool isDashing;
-    public float dashingPower;
-    public float dashingTime = 0.2f;
-    public float dashingCoolDown = 2f;
+    [SerializeField]
+    private bool _canDash = true;
+    [SerializeField]
+    private bool _isDashing;
+    [SerializeField]
+    private float _dashingPower;
+    [SerializeField]
+    private float _dashingTime;
+    [SerializeField]
+    public float _dashCoolDown;
     [SerializeField]
     Rigidbody2D rb;
 
@@ -26,7 +31,7 @@ public class Dash : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isDashing)
+        if (_isDashing)
         {
             return;
         }
@@ -34,7 +39,7 @@ public class Dash : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && _canDash)
         {
             _animator.Play(PlayerAnimationConstants.DASH);
             StartCoroutine(Dashing());
@@ -43,12 +48,12 @@ public class Dash : MonoBehaviour
 
     private IEnumerator Dashing()
     {
-        canDash = false;
-        isDashing = true;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 2f);
-        yield return new WaitForSeconds(dashingTime);
-        isDashing = false;
-        yield return new WaitForSeconds(dashingCoolDown);
-        canDash = true;
+        _canDash = false;
+        _isDashing = true;
+        rb.velocity = new Vector2(transform.localScale.x * _dashingPower, 2f);
+        yield return new WaitForSeconds(_dashingTime);
+        _isDashing = false;
+        yield return new WaitForSeconds(_dashCoolDown);
+        _canDash = true;
     }
 }

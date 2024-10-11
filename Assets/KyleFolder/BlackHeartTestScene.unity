@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 736527722}
   - component: {fileID: 736527724}
   m_Layer: 0
-  m_Name: Nomad
+  m_Name: Prisoner
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,7 +490,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: db339c29db0bd104c8f6c5ce295f41d2, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -644,11 +644,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192a513483db1d944972c1b7e4df60b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttack: 0
-  timeSinceAttack: 0
-  attackTransform: {fileID: 1930447666}
-  attackArea: {x: 0.85, y: 0.75}
-  AttackableLayer:
+  _timeBetweenAttack: 0
+  _timeSinceAttack: 0
+  _attackTransform: {fileID: 1930447666}
+  _attackArea: {x: 0.85, y: 0.75}
+  _attackableLayer:
     serializedVersion: 2
     m_Bits: 64
   _damage: 2
@@ -664,11 +664,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229e90455f2296c4e993555c999636e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canDash: 1
-  isDashing: 0
-  dashingPower: 10
-  dashingTime: 0.2
-  dashingCoolDown: 2
+  _canDash: 1
+  _isDashing: 0
+  _dashingPower: 10
+  _dashingTime: 0.2
+  _dashCoolDown: 2
   rb: {fileID: 736527717}
 --- !u!114 &736527724
 MonoBehaviour:
@@ -682,11 +682,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840c2fb649847044189e78a267a3c5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 3
-  fullHeart: {fileID: -141368780, guid: 5ba93e792399fac458629473b25b4ba4, type: 3}
-  emptyHeartSprite: {fileID: -640392273, guid: 5ba93e792399fac458629473b25b4ba4, type: 3}
-  hearts:
+  _health: 0
+  _maxHealth: 3
+  _fullHeartSprite: {fileID: -141368780, guid: 5ba93e792399fac458629473b25b4ba4, type: 3}
+  _emptyHeartSprite: {fileID: -640392273, guid: 5ba93e792399fac458629473b25b4ba4, type: 3}
+  _hearts:
   - {fileID: 487414657}
   - {fileID: 1536266528}
   - {fileID: 1837899239}

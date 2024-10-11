@@ -5,46 +5,50 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour, IHealth
 {
-    public int health;
-    public int maxHealth;
-
-    public Sprite fullHeart;
-    public Sprite emptyHeartSprite;
-    public Image[] hearts;
+    [SerializeField]
+    private int _health;
+    [SerializeField]
+    private int _maxHealth;
+    [SerializeField]
+    private Sprite _fullHeartSprite;
+    [SerializeField]
+    private Sprite _emptyHeartSprite;
+    [SerializeField]
+    private Image[] _hearts;
     void Start()
     {
-        health = maxHealth;
+        _health = _maxHealth;
     }
 
     void Update()
     {
-        for (int i = 0; i < hearts.Length; i++)
+        for (int i = 0; i < _hearts.Length; i++)
         {
-            if (i < health)
+            if (i < _health)
             {
-                hearts[i].sprite = fullHeart;
+                _hearts[i].sprite = _fullHeartSprite;
             }
 
             else
             {
-                hearts[i].sprite = emptyHeartSprite;
+                _hearts[i].sprite = _emptyHeartSprite;
             }
 
-            if (i < maxHealth)
+            if (i < _maxHealth)
             {
-                hearts[i].enabled = true;
+                _hearts[i].enabled = true;
             }
             else
             {
-                hearts[i].enabled = false;
+                _hearts[i].enabled = false;
             }
         }
     }
 
     public void TakeDamage()
     {
-        health--;
-        if (health <= 0)
+        _health--;
+        if (_health <= 0)
         {
             Debug.Log("Death");
         }
