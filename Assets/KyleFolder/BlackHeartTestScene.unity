@@ -1558,6 +1558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer
       objectReference: {fileID: 0}
+    - target: {fileID: 1328083994318585663, guid: 3f81843da08bf4e49a38203b9cfa091f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1608798435381312045, guid: 3f81843da08bf4e49a38203b9cfa091f, type: 3}
       propertyPath: _player
       value: 
@@ -1578,6 +1582,10 @@ PrefabInstance:
     - target: {fileID: 909607771300080472, guid: 583d9fa9754d4da4597d26e4320c54bf, type: 3}
       propertyPath: m_Name
       value: Spitter
+      objectReference: {fileID: 0}
+    - target: {fileID: 909607771300080472, guid: 583d9fa9754d4da4597d26e4320c54bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4301849991229410804, guid: 583d9fa9754d4da4597d26e4320c54bf, type: 3}
       propertyPath: player
@@ -1639,6 +1647,10 @@ PrefabInstance:
     - target: {fileID: 5721675878123483336, guid: ec1b096e390ed2843b3d4d68dc158f65, type: 3}
       propertyPath: m_Name
       value: Wanderer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721675878123483336, guid: ec1b096e390ed2843b3d4d68dc158f65, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6817989642752022397, guid: ec1b096e390ed2843b3d4d68dc158f65, type: 3}
       propertyPath: m_LocalPosition.x
