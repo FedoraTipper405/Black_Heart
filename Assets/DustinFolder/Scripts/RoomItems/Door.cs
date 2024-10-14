@@ -4,8 +4,10 @@ public class Door : MonoBehaviour
 {
     [SerializeField] private float moveDistance = 3f; // Distance to move when opening/closing
     [SerializeField] private float speed = 2f; // Speed of the door movement
-    [SerializeField] private bool startReversed = false; // Should the door start in reverse mode (open or reversed behavior)
+    [SerializeField] public bool startReversed = false; // Should the door start in reverse mode (open or reversed behavior)
     [SerializeField] private Collider2D blockingCollider; // Collider to block player when door is closing
+    [SerializeField] private bool useDoorBlocker = true; // Use blocking collider to block player when door is closing
+    [SerializeField] private bool moveHorizontal = false; // Should the door move horizontally instead of vertically
 
     private Vector2 closedPosition;
     private Vector2 openPosition;
@@ -14,7 +16,7 @@ public class Door : MonoBehaviour
     private void Start()
     {
         closedPosition = transform.position;
-        openPosition = closedPosition + Vector2.up * moveDistance;
+        openPosition = moveHorizontal ? closedPosition + Vector2.right * moveDistance : closedPosition + Vector2.up * moveDistance;
 
         if (startReversed)
         {
@@ -25,11 +27,11 @@ public class Door : MonoBehaviour
         }
 
         // Ensure blockingCollider is assigned in the Inspector
-        if (blockingCollider == null)
+        if (useDoorBlocker && blockingCollider == null)
         {
             Debug.LogWarning("Blocking collider is not assigned for door: " + gameObject.name);
         }
-        else
+        else if (useDoorBlocker && blockingCollider != null)
         {
             blockingCollider.enabled = !isPowered;
         }
@@ -40,7 +42,7 @@ public class Door : MonoBehaviour
         // Move the door based on its powered state
         if (isPowered)
         {
-            if (blockingCollider != null)
+            if (useDoorBlocker && blockingCollider != null)
             {
                 blockingCollider.enabled = false; // Disable collider when door is opening
             }
@@ -48,7 +50,7 @@ public class Door : MonoBehaviour
         }
         else
         {
-            if (blockingCollider != null)
+            if (useDoorBlocker && blockingCollider != null)
             {
                 blockingCollider.enabled = true; // Enable collider immediately when door starts closing
             }
