@@ -10,35 +10,36 @@ public class GrabController : MonoBehaviour
     private Transform _rayPoint;
     [SerializeField]
     private float _rayDis;
-    private GameObject _grabbedObject;
-    private int layerIndex;
+    public Behaviour _disablePrisonerScript;
 
     private void Start()
     {
-        layerIndex = LayerMask.NameToLayer("Enemy");
+
     }
 
     void Update()
     {
-        RaycastHit2D hitinfo = Physics2D.Raycast(_rayPoint.position, transform.right, _rayDis);
-        if(hitinfo.collider != null && hitinfo.collider.gameObject.layer == layerIndex)
+        RaycastHit2D grabCheck = Physics2D.Raycast(_rayPoint.position, Vector2.right * transform.localScale, _rayDis);
+        if (grabCheck.collider != null && grabCheck.collider.tag == "PickUp")
         {
-            if (Input.GetKeyDown(KeyCode.E) && _grabbedObject == null)
+            _disablePrisonerScript.enabled = false;
+            if (Input.GetKey(KeyCode.E))
             {
-                _grabbedObject = hitinfo.collider.gameObject;
-                _grabbedObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                _grabbedObject.transform.position = _grabPoint.position;
-                _grabbedObject.transform.SetParent(transform);
+                grabCheck.collider.gameObject.transform.parent = _grabPoint;
+                grabCheck.collider.gameObject.transform.position = _grabPoint.position;
+                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                grabCheck.collider.gameObject.GetComponent<Collider2D>().isTrigger = true;
             }
-            else if (Input.GetKeyDown(KeyCode.T))
+            else if (Input.GetKey(KeyCode.T))
             {
-                _grabbedObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                _grabbedObject.transform.SetParent(null);
-                _grabbedObject = null;
+                grabCheck.collider.gameObject.transform.parent = null;
+                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                grabCheck.collider.gameObject.GetComponent<Collider2D>().isTrigger = false;
+                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.localScale * 5);
             }
-            Debug.Log("Yes");
-            Debug.DrawRay(_rayPoint.position, transform.right * _rayDis);
-        
-        } 
+
+            Debug.DrawLine(_rayPoint.position, Vector2.right * transform.localScale * _rayDis);
+        }
     }
 }

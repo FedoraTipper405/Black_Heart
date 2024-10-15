@@ -23,10 +23,13 @@ public class Flyer : Enemy
         base.Update();
         
         _distance = Vector2.Distance(transform.position, _player.transform.position);
-        Vector2 direction = _player.transform.forward - transform.position;
+        if(_distance < 6)
+        {
+            Vector2 direction = _player.transform.forward - transform.position;
 
-        transform.position = Vector2.MoveTowards(this.transform.position, _player.transform.position, _speed * Time.deltaTime);
-        this.GetComponent<SpriteRenderer>().flipX = _player.transform.position.x <= 1f;
+            transform.position = Vector2.MoveTowards(this.transform.position, _player.transform.position, _speed * Time.deltaTime);
+            this.GetComponent<SpriteRenderer>().flipX = _player.transform.position.x <= 1f;
+        }
 
     }
     private void flip()

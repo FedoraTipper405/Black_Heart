@@ -48,9 +48,16 @@ public class HealthManager : MonoBehaviour, IHealth
     public void TakeDamage()
     {
         _health--;
+        StartCoroutine(StopTakingDamage());
         if (_health <= 0)
         {
             Debug.Log("Death");
         }
+    }
+    IEnumerator StopTakingDamage()
+    {
+        Physics2D.IgnoreLayerCollision(6, 7, true);
+        yield return new WaitForSeconds(3f);
+        Physics2D.IgnoreLayerCollision(6, 7, false);
     }
 }
