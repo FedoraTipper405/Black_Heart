@@ -43,7 +43,7 @@ public class Dash : MonoBehaviour
         {
             _animator.Play(PlayerAnimationConstants.DASH);
             StartCoroutine(Dashing());
-            SFXManager.PlaySound(SoundClip.Dash);
+            AudioManager.PlaySound(SoundClip.Dash);
         }
     }
 

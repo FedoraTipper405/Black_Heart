@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     protected float _speed;
     protected Rigidbody2D rb;
+    [SerializeField]
+    private GameObject Blood;
     void Start()
     {
 
@@ -24,6 +26,7 @@ public class Enemy : MonoBehaviour
         if (_enemyHealth <= 0)
         {
             Destroy(gameObject);
+            Instantiate(Blood, transform.position, Quaternion.identity);
         }
     }
 

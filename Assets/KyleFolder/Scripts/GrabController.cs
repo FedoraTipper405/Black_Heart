@@ -10,7 +10,6 @@ public class GrabController : MonoBehaviour
     private Transform _rayPoint;
     [SerializeField]
     private float _rayDis;
-    public Behaviour _disablePrisonerScript;
 
     private void Start()
     {
@@ -22,13 +21,13 @@ public class GrabController : MonoBehaviour
         RaycastHit2D grabCheck = Physics2D.Raycast(_rayPoint.position, Vector2.right * transform.localScale, _rayDis);
         if (grabCheck.collider != null && grabCheck.collider.tag == "PickUp")
         {
-            _disablePrisonerScript.enabled = false;
             if (Input.GetKey(KeyCode.E))
             {
                 grabCheck.collider.gameObject.transform.parent = _grabPoint;
                 grabCheck.collider.gameObject.transform.position = _grabPoint.position;
                 grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                grabCheck.collider.gameObject.GetComponent<DeadPrisoner>().enabled = false;
                 grabCheck.collider.gameObject.GetComponent<Collider2D>().isTrigger = true;
             }
             else if (Input.GetKey(KeyCode.T))

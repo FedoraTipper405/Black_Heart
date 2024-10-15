@@ -9,17 +9,26 @@ public enum SoundClip
     Jump,
 }
 
-public class SFXManager : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
     [SerializeField]
     private AudioClip[] _soundClip;
     [SerializeField]
     private AudioSource SFXSource;
-    private static SFXManager instance;
+    [SerializeField]
+    private AudioSource MusicSource;
+    [SerializeField]
+    private AudioClip _musicClip;
+    private static AudioManager instance;
 
     private void Awake()
     {
         instance = this;
+    }
+    private void Start()
+    {
+        MusicSource.clip = _musicClip;
+        MusicSource.Play();
     }
 
     public static void PlaySound(SoundClip soundClip)
