@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     public float _damage;
     private Animator _animator;
+    public bool _disableAttack;
 
     void Awake()
     {
@@ -26,16 +27,21 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
-
+        _disableAttack = false;
     }
 
 
     void Update()
     {
         _timeSinceAttack += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.R))
+    }
+
+    public void Attack()
+    {
+        if (_disableAttack == false)
         {
             _animator.Play(PlayerAnimationConstants.ATTACK);
+            AudioManager.PlaySound(SoundClip.Hit);
             if (_timeSinceAttack >= _timeBetweenAttack)
             {
                 _timeSinceAttack = 0;

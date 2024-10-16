@@ -5,12 +5,12 @@ using UnityEngine;
 public class Flyer : Enemy
 {
 
-    public GameObject _player;
+    private GameObject _player;
     private float _distance;
     
     void Start()
     {
-        
+        _player = GameObject.FindGameObjectWithTag("Player");
     }
 
     protected override void Awake()

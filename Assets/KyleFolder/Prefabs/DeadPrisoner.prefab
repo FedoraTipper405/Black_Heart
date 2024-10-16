@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8816990996317620969}
   - component: {fileID: 8936871150431687412}
   - component: {fileID: 3411901194958505487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DeadPrisoner
   m_TagString: PickUp
   m_Icon: {fileID: 0}

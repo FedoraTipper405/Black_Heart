@@ -10,16 +10,17 @@ public class GrabController : MonoBehaviour
     private Transform _rayPoint;
     [SerializeField]
     private float _rayDis;
+    private int _layerindex;
 
     private void Start()
     {
-
+        _layerindex = LayerMask.NameToLayer("PickUp");
     }
 
     void Update()
     {
         RaycastHit2D grabCheck = Physics2D.Raycast(_rayPoint.position, Vector2.right * transform.localScale, _rayDis);
-        if (grabCheck.collider != null && grabCheck.collider.tag == "PickUp")
+        if (grabCheck.collider != null && grabCheck.collider.gameObject.layer == _layerindex)
         {
             if (Input.GetKey(KeyCode.E))
             {

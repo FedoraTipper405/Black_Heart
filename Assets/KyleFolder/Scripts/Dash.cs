@@ -17,15 +17,16 @@ public class Dash : MonoBehaviour
     public float _dashCoolDown;
     [SerializeField]
     Rigidbody2D rb;
-
     private Animator _animator;
+    public bool _disableDash;
+
     void Awake()
     {
         _animator = GetComponent<Animator>();
     }
     void Start()
     {
-
+        _disableDash = false;
     }
 
 
@@ -37,17 +38,17 @@ public class Dash : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void Dashing()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && _canDash)
+        if (_canDash && _disableDash == false)
         {
             _animator.Play(PlayerAnimationConstants.DASH);
-            StartCoroutine(Dashing());
+            StartCoroutine(IsDashing());
             AudioManager.PlaySound(SoundClip.Dash);
         }
     }
 
-    private IEnumerator Dashing()
+    private IEnumerator IsDashing()
     {
         _canDash = false;
         _isDashing = true;

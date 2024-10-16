@@ -1,3 +1,4 @@
+using Code.Scripts.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,6 +53,12 @@ public class HealthManager : MonoBehaviour, IHealth
         if (_health <= 0)
         {
             Debug.Log("Death");
+            PlayerAttack attack = GetComponent<PlayerAttack>();
+            attack._disableAttack = true;
+            Dash dash = GetComponent<Dash>();
+            dash._disableDash = true;
+            PlayerController controller = GetComponent<PlayerController>();
+            controller.enabled = false;
         }
     }
     IEnumerator StopTakingDamage()
