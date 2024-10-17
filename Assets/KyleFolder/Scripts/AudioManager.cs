@@ -7,6 +7,7 @@ public enum SoundClip
     Hit,
     Dash,
     Jump,
+    BloodSplat,
 }
 
 public class AudioManager : MonoBehaviour

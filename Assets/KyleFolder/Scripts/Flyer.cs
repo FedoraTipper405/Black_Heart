@@ -7,6 +7,7 @@ public class Flyer : Enemy
 
     private GameObject _player;
     private float _distance;
+    public float _radius;
     
     void Start()
     {
@@ -23,7 +24,7 @@ public class Flyer : Enemy
         base.Update();
         
         _distance = Vector2.Distance(transform.position, _player.transform.position);
-        if(_distance < 6)
+        if(_distance < _radius)
         {
             Vector2 direction = _player.transform.forward - transform.position;
 

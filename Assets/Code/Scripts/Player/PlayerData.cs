@@ -10,7 +10,7 @@ namespace Code.Scripts.Player
         [field: SerializeField, Range(0f, 20f),Header("Movement")] public float MovementSpeed { get; private set; } = 5f;
         
         [field: SerializeField, Range(1f, 20f)] public float MaxAcceleration { get; private set; } = 50f;
-        [field: SerializeField, Range(1f, 20f)] public float MaxDeceleration { get; private set; } = 50f;
+        [field: SerializeField, Range(1f, 50f)] public float MaxDeceleration { get; private set; } = 50f;
         [field: SerializeField, Range(0f, 20f)] public float MaxTurnSpeed { get; private set; } = 80f;
         
         [field: SerializeField, Range(0f, 20f), Header("Jump Settings")] public float JumpHeight { get; private set; } = 5f;

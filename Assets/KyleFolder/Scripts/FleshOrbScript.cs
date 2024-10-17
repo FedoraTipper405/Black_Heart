@@ -25,7 +25,7 @@ public class FleshOrbScript : MonoBehaviour
     {
         _timer += Time.deltaTime;
 
-        if (_timer > 3)
+        if (_timer > 2)
         {
             Destroy(gameObject);
         }

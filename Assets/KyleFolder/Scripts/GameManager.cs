@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             _deaths.NumOfDeathes++;
-            SceneManager.LoadScene("BlackHeartTestScene");
+            SceneManager.LoadScene("BlackHeartNormalScene");
         }
     }
 }

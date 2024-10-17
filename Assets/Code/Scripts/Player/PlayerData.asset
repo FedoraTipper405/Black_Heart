@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MovementSpeed>k__BackingField: 10
   <MaxAcceleration>k__BackingField: 20
-  <MaxDeceleration>k__BackingField: 20
+  <MaxDeceleration>k__BackingField: 50
   <MaxTurnSpeed>k__BackingField: 20
-  <JumpHeight>k__BackingField: 3
+  <JumpHeight>k__BackingField: 5.4
   <TimeToApex>k__BackingField: 0.5
   <UpMovementMultiplier>k__BackingField: 1
   <DownMovementMultiplier>k__BackingField: 5

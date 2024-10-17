@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(Blood, transform.position, Quaternion.identity);
+            AudioManager.PlaySound(SoundClip.BloodSplat);
         }
     }
 
