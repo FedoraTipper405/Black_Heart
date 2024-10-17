@@ -35,7 +35,7 @@ public class FleshOrbScript : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<IHealth>() != null)
         {
-            collision.gameObject.GetComponent<IHealth>().TakeDamage();
+            collision.gameObject.GetComponent<IHealth>().TakeDamage(1);
             Destroy(gameObject);
         }
     }

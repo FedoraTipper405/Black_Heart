@@ -16,6 +16,21 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(_deadPrisoner, transform.position, Quaternion.identity);
         }
+        switch (_deaths.NumOfDeathes)
+        {
+            case 1:
+                Debug.Log("Scene1");
+                break;
+            case 2:
+                Debug.Log("Scene1");
+                break;
+            case 3:
+                Debug.Log("Scene2");
+                break;
+            case 4:
+                Debug.Log("Scene3");
+                break;
+        }
     }
 
     void Update()

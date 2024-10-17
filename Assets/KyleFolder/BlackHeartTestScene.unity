@@ -328,7 +328,7 @@ Transform:
   m_GameObject: {fileID: 432096234}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.48, y: -3.52, z: -10}
+  m_LocalPosition: {x: -3.5, y: 0.72, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -587,7 +587,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018339455, y: 0.63819253}
+  m_Offset: {x: -0.018339455, y: 0.6355133}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -598,7 +598,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6220069, y: 1.3150887}
+  m_Size: {x: 0.6220069, y: 1.3204472}
   m_EdgeRadius: 0
 --- !u!212 &736527719
 SpriteRenderer:
@@ -661,7 +661,7 @@ Transform:
   m_GameObject: {fileID: 736527711}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.48, y: -3.52, z: 0}
+  m_LocalPosition: {x: -3.5, y: 0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -708,6 +708,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _damage: 2
+  _disableAttack: 0
 --- !u!114 &736527723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,6 +727,7 @@ MonoBehaviour:
   _dashingTime: 0.2
   _dashCoolDown: 2
   rb: {fileID: 736527717}
+  _disableDash: 0
 --- !u!114 &736527724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,7 +981,7 @@ Transform:
   m_GameObject: {fileID: 856516156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.48, y: -3.52, z: -10}
+  m_LocalPosition: {x: -3.5, y: 0.72, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1995,7 +1997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1328083994318585663, guid: 3f81843da08bf4e49a38203b9cfa091f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1608798435381312045, guid: 3f81843da08bf4e49a38203b9cfa091f, type: 3}
       propertyPath: Blood
@@ -2024,7 +2026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 909607771300080472, guid: 583d9fa9754d4da4597d26e4320c54bf, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4301849991229410804, guid: 583d9fa9754d4da4597d26e4320c54bf, type: 3}
       propertyPath: Blood
@@ -2093,7 +2095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5721675878123483336, guid: ec1b096e390ed2843b3d4d68dc158f65, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6817989642752022397, guid: ec1b096e390ed2843b3d4d68dc158f65, type: 3}
       propertyPath: m_LocalPosition.x

@@ -32,4 +32,20 @@ public class PlayerInputController : MonoBehaviour
         }
         _playerInputs.Enable();
     }
+    private void OnDisable()
+    {
+        if (_playerInputs == null)
+        {
+            _playerInputs = new PlayerInputs();
+            _playerInputs.PlayerActions.Movement.performed +=
+                (val) => _playerController.HandleMovement(val.ReadValue<Vector2>());
+            _playerInputs.PlayerActions.Jump.performed -= (val) => _playerController.HandleJump();
+            _playerInputs.PlayerActions.Jump.canceled -= (val) => _playerController.CancelJump();
+            _playerInputs.PlayerActions.Dash.performed -= (val) => _dash.Dashing();
+            _playerInputs.PlayerActions.Attack.performed -= (val) => _attack.Attack();
+
+        }
+        _playerInputs.Disable();
+        _playerInputs = null;
+    }
 }

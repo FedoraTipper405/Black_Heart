@@ -46,9 +46,9 @@ public class HealthManager : MonoBehaviour, IHealth
         }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        _health--;
+        _health = _health - damage;
         StartCoroutine(StopTakingDamage());
         if (_health <= 0)
         {

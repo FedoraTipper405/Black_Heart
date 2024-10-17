@@ -98,7 +98,7 @@ namespace Code.Scripts.Player
 
         public void HandleMovement(Vector2 movement)
         {
-
+            Data.MovementDirection = movement.x;
             if (movement.x < 0)
             {
                 transform.localScale = new Vector3(-1, 1, 1);
@@ -107,7 +107,6 @@ namespace Code.Scripts.Player
             {
                 transform.localScale = new Vector3(1, 1, 1);
             }
-            Data.MovementDirection = movement.x;
         }
 
         public void HandleJump()

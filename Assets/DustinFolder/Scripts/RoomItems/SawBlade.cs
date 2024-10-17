@@ -8,6 +8,7 @@ public class SawBlade : MonoBehaviour
     [SerializeField] private float waitTime = 1f; // Time to wait at each end before reversing
     [SerializeField] private bool oscillate = true; // Should the saw blade oscillate back and forth
     [SerializeField] private bool startPoweredOn = true; // Should the saw blade start powered on
+    private int _damage = 3;
 
     private int currentNodeIndex = 0;
     private bool movingForward = true;
@@ -78,6 +79,7 @@ public class SawBlade : MonoBehaviour
         {
             // This is where you'll add the code for the saw blade to deduct health from the player
             Debug.Log("Saw blade has collided with the player");
+            collision.gameObject.GetComponent<IHealth>().TakeDamage(_damage);
         }
     }
 }
