@@ -45,8 +45,11 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: BackGround
-    uniqueID: 2608983877
+    uniqueID: 953210759
     locked: 0
   - name: GameElements
     uniqueID: 1835970197
+    locked: 0
+  - name: Layout
+    uniqueID: 2608983877
     locked: 0
