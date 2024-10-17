@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1093110069, guid: 6d7905e86b41c9f4aa6ef3383dc85e81, type: 3}
+  m_Sprite: {fileID: 664865665037357452, guid: 4b495dfb3d8fd4b4eab5ab1ebe2e3414, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,18 +119,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008507252, y: 0.013985574}
+  m_Offset: {x: 0.10085809, y: 0.88404727}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.375, y: 1.4125}
+    pivot: {x: 0.4615385, y: 0}
+    oldSize: {x: 1.625, y: 1.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4934115, y: 1.4531296}
+  m_Size: {x: 1.7121422, y: 1.8030982}
   m_EdgeRadius: 0
 --- !u!50 &554819464075643454
 Rigidbody2D:
@@ -173,5 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyHealth: 8
   _speed: 4
+  Blood: {fileID: 0}
   _PointA: {fileID: 0}
   _PointB: {fileID: 0}
