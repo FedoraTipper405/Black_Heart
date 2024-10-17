@@ -20,12 +20,12 @@ namespace Code.Scripts.Player
 
     public static class PlayerAnimationConstants
     {
-        public const string IDLE = "Idle";
+        public const string IDLE = "Sprite-Idle_Clip";
         public const string WALK = "Walk";
-        public const string RUN = "Run";
+        public const string RUN = "Sprite-move_Clip";
         public const string AIR = "JumpMid";
-        public const string JUMP = "Jump";
-        public const string ATTACK = "ComboAttack01";
-        public const string DASH = "Dash";
+        public const string JUMP = "Sprite-Jump_Clip";
+        public const string ATTACK = "[punch]";
+        public const string DASH = "[dash]";
     }
 }

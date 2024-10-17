@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1328083994318585663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.65, y: 1.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1304857699, guid: 6d7905e86b41c9f4aa6ef3383dc85e81, type: 3}
+  m_Sprite: {fileID: 3224475037050818521, guid: 9f1c3ca513e22374097ffaf4a8d9b5ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyHealth: 6
   _speed: 2
+  Blood: {fileID: 0}
   _player: {fileID: 0}
 --- !u!61 &5915189726730214849
 BoxCollider2D:
@@ -134,18 +135,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004836142, y: 0.0024180412}
+  m_Offset: {x: -0.004836142, y: 0.8743784}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.075}
+    pivot: {x: 0.5, y: -0.5}
+    oldSize: {x: 1.25, y: 0.875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.299838, y: 1.0918858}
+  m_Size: {x: 1.299838, y: 0.97250617}
   m_EdgeRadius: 0
 --- !u!50 &7124536134829779898
 Rigidbody2D:
