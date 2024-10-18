@@ -1,3 +1,4 @@
+using Code.Scripts.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,12 @@ public class Flyer : Enemy
     private GameObject _player;
     private float _distance;
     public float _radius;
-    
+    private Animator _animator;
+
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
+        _animator = GetComponent<Animator>();
     }
 
     protected override void Awake()
@@ -30,6 +33,7 @@ public class Flyer : Enemy
 
             transform.position = Vector2.MoveTowards(this.transform.position, _player.transform.position, _speed * Time.deltaTime);
             this.GetComponent<SpriteRenderer>().flipX = _player.transform.position.x <= 1f;
+            _animator.Play(FlyerAnimationConstants.CHASE);
         }
 
     }

@@ -17,7 +17,7 @@ public class GrabController : MonoBehaviour
         _layerindex = LayerMask.NameToLayer("PickUp");
     }
 
-    void Update()
+    void FixedUpdate()
     {
         RaycastHit2D grabCheck = Physics2D.Raycast(_rayPoint.position, Vector2.right * transform.localScale, _rayDis);
         if (grabCheck.collider != null && grabCheck.collider.gameObject.layer == _layerindex)
@@ -30,6 +30,7 @@ public class GrabController : MonoBehaviour
                 grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 grabCheck.collider.gameObject.GetComponent<DeadPrisoner>().enabled = false;
                 grabCheck.collider.gameObject.GetComponent<Collider2D>().isTrigger = true;
+                grabCheck.collider.gameObject.GetComponent<Animator>().Play(DeadPrisonerAnimationConstants.IDLE);
             }
             else if (Input.GetKey(KeyCode.T))
             {

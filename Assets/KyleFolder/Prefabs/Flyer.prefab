@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1608798435381312045}
   - component: {fileID: 5915189726730214849}
   - component: {fileID: 7124536134829779898}
+  - component: {fileID: 5341228513102236093}
+  - component: {fileID: 4319184498776050623}
   m_Layer: 6
   m_Name: Flyer
   m_TagString: Untagged
@@ -73,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1835970197
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3224475037050818521, guid: 9f1c3ca513e22374097ffaf4a8d9b5ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -101,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyHealth: 4
   _speed: 4
-  Blood: {fileID: 0}
+  Blood: {fileID: 995101411814407742, guid: 1059d851f3277864ebbd549c2a0f5072, type: 3}
   _radius: 10
 --- !u!61 &5915189726730214849
 BoxCollider2D:
@@ -175,3 +177,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &5341228513102236093
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328083994318585663}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 6871354004978209948, guid: f960c7641ef85d44c892df27861e7dfa, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4319184498776050623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328083994318585663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859cb5533b7a78e4a94be8bef5f48bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5580165836562971229}
   - component: {fileID: -6413301657265341938}
   - component: {fileID: -3941367292079554178}
+  - component: {fileID: 460865811329129303}
   m_Layer: 0
   m_Name: SawBlade
   m_TagString: Untagged
@@ -135,6 +136,27 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06320804, y: 0.9210314}
+  m_Offset: {x: 0.03870809, y: 0.92409396}
   serializedVersion: 2
-  m_Radius: 0.8340996
+  m_Radius: 0.6687257
+--- !u!95 &460865811329129303
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4955712792735597282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 8129377053856174154, guid: 3a9fd1b3c98fcde4fa711531263e335d, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

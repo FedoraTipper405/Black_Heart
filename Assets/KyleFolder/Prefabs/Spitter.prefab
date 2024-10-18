@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5728328690862617156}
   - component: {fileID: 4301849991229410804}
   - component: {fileID: 7751611088515762003}
+  - component: {fileID: 278972575434533596}
   m_Layer: 6
   m_Name: Spitter
   m_TagString: Untagged
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1835970197
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -6453373381449707007, guid: e62b51bf53db4ad48907c70c27405323, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,11 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093939cd7007aa0468e789e1b486b952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyHealth: 6
+  _enemyHealth: 8
   _speed: 0
-  Blood: {fileID: 0}
+  Blood: {fileID: 995101411814407742, guid: 1059d851f3277864ebbd549c2a0f5072, type: 3}
   _fleshOrb: {fileID: 2791367196079100315, guid: 65455c4dd04d7224c98f03ef8fb6c3a6, type: 3}
   _fleshOrbPos: {fileID: 6923967148309971105}
+  _radius: 16
   player: {fileID: 0}
 --- !u!61 &7751611088515762003
 BoxCollider2D:
@@ -150,6 +152,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1611052, y: 2.030102}
   m_EdgeRadius: 0
+--- !u!95 &278972575434533596
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909607771300080472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 4704689539776041949, guid: e62b51bf53db4ad48907c70c27405323, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3857708454835498638
 GameObject:
   m_ObjectHideFlags: 0
