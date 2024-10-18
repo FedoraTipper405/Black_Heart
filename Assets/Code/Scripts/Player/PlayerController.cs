@@ -1,6 +1,5 @@
 ﻿using System;
 using Code.Scripts.StateMachine;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
