@@ -15,10 +15,21 @@ EditorUserSettings:
       value: 540752035702590f55080f70127b0e44104e497e2d7b70357c704965b4e4373b
       flags: 0
     RecentlyUsedSceneGuid-3:
-      value: 5457005303535e0d0c57582644275e444e151b7e752e76697e2d4931b4e16c6c
+      value: 0557025257535c59545c0f77427a0b44444e4a7f7b7c70367f7b4f6ab4b9653e
       flags: 0
     RecentlyUsedSceneGuid-4:
+      value: 5457005303535e0d0c57582644275e444e151b7e752e76697e2d4931b4e16c6c
+      flags: 0
+<<<<<<< HEAD
+    RecentlyUsedSceneGuid-4:
       value: 51500207005458590e59557543275d44154e4d782d7e72337a7a4a66b6e1666b
+=======
+    RecentlyUsedSceneGuid-5:
+      value: 55000c0703535d5e0e0d5f7042270d444e4f482c757a20687e2d4b64e4b46268
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 5509025004565e58590c5f2740705e44454f1c7c752b75652e714461b4e1653b
+>>>>>>> main/EnzoBranch2
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
