@@ -19,6 +19,8 @@ public class PlayerAttack : MonoBehaviour
     public float _damage;
     private Animator _animator;
     public bool _disableAttack;
+    [SerializeField] 
+    private GameObject _slashEffect;
 
     void Awake()
     {
@@ -42,6 +44,7 @@ public class PlayerAttack : MonoBehaviour
         {
             _animator.Play(PlayerAnimationConstants.ATTACK);
             AudioManager.PlaySound(SoundClip.Hit);
+            Instantiate(_slashEffect, _attackTransform);
             if (_timeSinceAttack >= _timeBetweenAttack)
             {
                 _timeSinceAttack = 0;

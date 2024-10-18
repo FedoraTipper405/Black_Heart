@@ -2,6 +2,7 @@ using Code.Scripts.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour, IHealth
@@ -16,6 +17,8 @@ public class HealthManager : MonoBehaviour, IHealth
     private Sprite _emptyHeartSprite;
     [SerializeField]
     private Image[] _hearts;
+    [SerializeField]
+    private UnityEvent _death;
     void Start()
     {
         _health = _maxHealth;
@@ -59,6 +62,7 @@ public class HealthManager : MonoBehaviour, IHealth
             dash._disableDash = true;
             PlayerController controller = GetComponent<PlayerController>();
             controller.enabled = false;
+            _death.Invoke();
         }
     }
     IEnumerator StopTakingDamage()

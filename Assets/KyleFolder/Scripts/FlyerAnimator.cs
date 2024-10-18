@@ -10,7 +10,6 @@ public class FlyerAnimator : MonoBehaviour
     void Awake()
     {
         _animator = GetComponent<Animator>();
-        _animator.Play(FlyerAnimationConstants.IDLE);
     }
 
     public void PlayAnimation(string animationName)
@@ -22,5 +21,4 @@ public class FlyerAnimator : MonoBehaviour
 public static class FlyerAnimationConstants
 {
     public const string CHASE = "Sprite-FlyingEnemy2Movement_Clip";
-    public const string IDLE = "IdleFlyerAnimation";
 }

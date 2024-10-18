@@ -10,12 +10,17 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _deadPrisoner;
 
-    void Start()
+    private void Start()
     {
         if (_deaths.NumOfDeathes == 1)
         {
             Instantiate(_deadPrisoner, transform.position, Quaternion.identity);
         }
+    }
+    public void ChangeScene()
+    {
+        _deaths.NumOfDeathes++;
+        SceneManager.LoadScene("BlackHeartNormalScene");
         switch (_deaths.NumOfDeathes)
         {
             case 1:
@@ -30,15 +35,6 @@ public class GameManager : MonoBehaviour
             case 4:
                 Debug.Log("Scene3");
                 break;
-        }
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            _deaths.NumOfDeathes++;
-            SceneManager.LoadScene("BlackHeartNormalScene");
         }
     }
 }
