@@ -17,6 +17,15 @@ public class SawBlade : MonoBehaviour
     private void Start()
     {
         isPowered = startPoweredOn;
+
+        // Hides track nodes in-game but keep them visible in the editor
+        foreach (Transform node in trackNodes)
+        {
+            if (node != null)
+            {
+                node.gameObject.SetActive(false);
+            }
+        }
     }
 
     private void Update()

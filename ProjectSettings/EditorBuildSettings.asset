@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DustinFolder/Scenes/TestScene.unity
     guid: ee01631c1b89e6640a532751982db3e9
+  - enabled: 1
+    path: Assets/DustinFolder/Scenes/MainMenu.unity
+    guid: 2a6aea1bc7973db4c952a64c73754a23
   m_configObjects: {}
