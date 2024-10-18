@@ -62,6 +62,7 @@ public class HealthManager : MonoBehaviour, IHealth
             dash._disableDash = true;
             PlayerController controller = GetComponent<PlayerController>();
             controller.enabled = false;
+            AudioManager.PlaySound(SoundClip.DeathScream);
             _death.Invoke();
         }
     }

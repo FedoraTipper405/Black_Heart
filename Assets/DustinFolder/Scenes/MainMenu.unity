@@ -328,6 +328,7 @@ MonoBehaviour:
   quitButton: {fileID: 1176746705}
   titleText: {fileID: 0}
   startSceneName: TestScene
+  _deaths: {fileID: 11400000, guid: a6ace1980fae570459092fb9799fe1a5, type: 2}
 --- !u!114 &108012266
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class MainMenu : MonoBehaviour
 
     private PlayerInput playerInput;
     private InputAction clickAction;
+    [SerializeField]
+    private DeathCountSO _deaths;
 
     private void Awake()
     {
@@ -26,6 +28,7 @@ public class MainMenu : MonoBehaviour
         clickAction = playerInput.actions["Click"];
 
         clickAction.performed += OnClickPerformed;
+        _deaths.NumOfDeathes = 0;
     }
 
     private void OnDestroy()
@@ -55,7 +58,7 @@ public class MainMenu : MonoBehaviour
     private void OnStartButtonClicked()
     {
         // Load the start scene
-        SceneManager.LoadScene(startSceneName);
+        SceneManager.LoadScene("BlackHeartNormalScene");
     }
 
     private void OnQuitButtonClicked()

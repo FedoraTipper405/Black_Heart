@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/DustinFolder/Scenes/MainMenu.unity
+    guid: 2a6aea1bc7973db4c952a64c73754a23
   - enabled: 1
-    path: Assets/DustinFolder/Scenes/TestScene.unity
-    guid: ee01631c1b89e6640a532751982db3e9
+    path: Assets/EnzoFolder/BlackHeartNormalScene.unity
+    guid: 7f45ff76a94d4da48bc49f093d4b6a84
+  - enabled: 1
+    path: Assets/EnzoFolder/BlackHeartHalfInsanity.unity
+    guid: 618aff4ecc322d24880f92f83d67f460
+  - enabled: 1
+    path: Assets/EnzoFolder/BlackHeartFullInsanity.unity
+    guid: 6866ac7c4b3e03a438d69c35c8926a1c
+  - enabled: 1
+    path: Assets/EnzoFolder/GameCompletion.unity
+    guid: 8ca387cd20079464e9ce773dceec785b
   m_configObjects: {}

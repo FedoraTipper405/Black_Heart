@@ -10,6 +10,7 @@ public class Flyer : Enemy
     private float _distance;
     public float _radius;
     private Animator _animator;
+    private bool _hasPlayed;
 
     void Start()
     {
@@ -29,6 +30,8 @@ public class Flyer : Enemy
         _distance = Vector2.Distance(transform.position, _player.transform.position);
         if(_distance < _radius)
         {
+            CallSound();
+            _hasPlayed = true;
             Vector2 direction = _player.transform.forward - transform.position;
 
             transform.position = Vector2.MoveTowards(this.transform.position, _player.transform.position, _speed * Time.deltaTime);
@@ -37,6 +40,14 @@ public class Flyer : Enemy
         }
 
     }
+    public void CallSound()
+    {
+        if (_hasPlayed == false)
+        {
+            AudioManager.PlaySound(SoundClip.Scream);
+        }
+    }
+
     private void flip()
     {
         Vector3 localScale = transform.localScale;

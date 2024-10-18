@@ -8,6 +8,8 @@ public enum SoundClip
     Dash,
     Jump,
     BloodSplat,
+    Scream,
+    DeathScream,
 }
 
 public class AudioManager : MonoBehaviour

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 722267281523521727}
   - component: {fileID: 1412960291895446014}
   - component: {fileID: 182176558160786738}
-  - component: {fileID: 7352352176148300329}
   m_Layer: 8
   m_Name: DeadPrisoner
   m_TagString: Player
@@ -173,24 +172,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
---- !u!95 &7352352176148300329
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7297611557092209707}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 1036539422633213908, guid: ef804e5c531cf944dbbc559d8e8335dc, type: 3}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

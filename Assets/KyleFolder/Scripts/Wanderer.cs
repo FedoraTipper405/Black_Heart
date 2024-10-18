@@ -17,7 +17,7 @@ public class Wanderer : Enemy
     {
         base.Awake();
     }
-    protected override void Update()
+    void Update()
     {
         base.Update();
 

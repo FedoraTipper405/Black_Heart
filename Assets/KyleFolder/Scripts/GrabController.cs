@@ -30,9 +30,8 @@ public class GrabController : MonoBehaviour
                 grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                 grabCheck.collider.gameObject.GetComponent<DeadPrisoner>().enabled = false;
                 grabCheck.collider.gameObject.GetComponent<Collider2D>().isTrigger = true;
-                grabCheck.collider.gameObject.GetComponent<Animator>().Play(DeadPrisonerAnimationConstants.IDLE);
             }
-            else if (Input.GetKey(KeyCode.T))
+            else if (Input.GetKey(KeyCode.R))
             {
                 grabCheck.collider.gameObject.transform.parent = null;
                 grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (_deaths.NumOfDeathes == 1)
+        if (_deaths.NumOfDeathes >= 1)
         {
             Instantiate(_deadPrisoner, transform.position, Quaternion.identity);
         }
@@ -20,21 +20,17 @@ public class GameManager : MonoBehaviour
     public void ChangeScene()
     {
         _deaths.NumOfDeathes++;
-        SceneManager.LoadScene("BlackHeartNormalScene");
-        switch (_deaths.NumOfDeathes)
+        if(_deaths.NumOfDeathes == 1)
         {
-            case 1:
-                Debug.Log("Scene1");
-                break;
-            case 2:
-                Debug.Log("Scene1");
-                break;
-            case 3:
-                Debug.Log("Scene2");
-                break;
-            case 4:
-                Debug.Log("Scene3");
-                break;
+            SceneManager.LoadScene("BlackHeartNormalScene");
+        }
+        else if(_deaths.NumOfDeathes == 2)
+        {
+            SceneManager.LoadScene("BlackHeartHalfInsanity");
+        }
+        else if(_deaths.NumOfDeathes >= 3)
+        {
+            SceneManager.LoadScene("BlackHeartFullInsanity");
         }
     }
 }
